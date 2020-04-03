@@ -1,38 +1,14 @@
 //% block="settings" color=#3b3b3b icon="\uf0c7"
-//% groups='["Strings", "Numbers", "Arrays", "Operations"]'
+//% groups='["Numbers", "Strings", "Arrays", "Operations"]'
 namespace blockSettings {
-    /**
-     * Set named settings to a given string.
-     * 
-     * @param name   The name of the setting to set
-     */
-    //% blockId=block_settings_write_string
-    //% block="set name $name to string $value"
-    //% weight=100 blockGap=8 group="Strings"
-    export function writeString(name: string, value: string) {
-        settings.writeString(name, value);
-    }
-
-    /**
-     * Read named setting as a string.
-     * 
-     * @param name   The name of the setting to read
-     */
-    //% blockId=block_settings_read_string
-    //% block="read setting $name as string"
-    //% weight=90 group="Strings"
-    export function readString(name: string) {
-        return settings.readString(name);
-    }
-
     /**
      * Set named settings to a given number.
      * 
      * @param name   The name of the setting to set
      */
     //% blockId=block_settings_write_number
-    //% block="set name $name to number $value"
-    //% weight=80 blockGap=8 group="Numbers"
+    //% block="set setting $name to number $value"
+    //% weight=100 blockGap=8 group="Numbers"
     export function writeNumber(name: string, value: number) {
         settings.writeNumber(name, value);
     }
@@ -44,9 +20,33 @@ namespace blockSettings {
      */
     //% blockId=block_settings_read_number
     //% block="read setting $name as number"
-    //% weight=70 group="Numbers"
+    //% weight=90 group="Numbers"
     export function readNumber(name: string) {
         return settings.readNumber(name);
+    }
+
+    /**
+     * Set named settings to a given string.
+     * 
+     * @param name   The name of the setting to set
+     */
+    //% blockId=block_settings_write_string
+    //% block="set setting $name to string $value"
+    //% weight=80 blockGap=8 group="Strings"
+    export function writeString(name: string, value: string) {
+        settings.writeString(name, value);
+    }
+
+    /**
+     * Read named setting as a string.
+     * 
+     * @param name   The name of the setting to read
+     */
+    //% blockId=block_settings_read_string
+    //% block="read setting $name as string"
+    //% weight=70 group="Strings"
+    export function readString(name: string) {
+        return settings.readString(name);
     }
 
     /**
@@ -55,7 +55,7 @@ namespace blockSettings {
      * @param name   The name of the setting to set
      */
     //% blockId=block_settings_write_number_array
-    //% block="set name $name to number array $value"
+    //% block="set setting $name to number array $value"
     //% weight=60 blockGap=8 group="Arrays"
     export function writeNumberArray(name: string, value: number[]) {
         settings.writeNumberArray(name, value);
